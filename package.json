@@ -1,0 +1,33 @@
+{
+  "name": "ilovegronk",
+  "version": "1.0.0",
+  "description": "Gronk Fan Site",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server/index.js",
+    "start": "node server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrezues/ILoveGronk.git"
+  },
+  "keywords": [
+    "rob",
+    "gronk",
+    "football",
+    "tall",
+    "muscles"
+  ],
+  "author": "Gabriel Aquino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrezues/ILoveGronk/issues"
+  },
+  "homepage": "https://github.com/gabrezues/ILoveGronk#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}
