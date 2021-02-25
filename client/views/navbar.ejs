@@ -1,5 +1,12 @@
 <div id="navbar">
-    <a href="/">Home</a>
-    <a href="/Aboutme">Gronk Gronk Gronk</a>
-
+<form method="post" action="welcome">
+    <a href="/">Home</a> &diam;
+    <a href="/Aboutme">Gronk Gronk Gronk</a> &diam;
+    <% if(nomen) { %>
+    Hello <%=nomen%>!
+    <% } else { %>
+    <input type="text" name="visitorname" />
+    <button type="submit">Tell me your name</button>
+    <% } %>
+</form>
 </div>
