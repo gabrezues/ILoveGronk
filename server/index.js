@@ -19,7 +19,7 @@ app.use(session({
     name: 'Gronk',
     secret: 'mydad',
     saveUninitialized: true,
-    resave: true,
+    resave: false,
     cookie: {
         maxAge: 1000*60*60*24*3
     }
@@ -46,15 +46,15 @@ app.set('views',viewsPath);
 
 
 app.get('/', function(req, res) {
-    res.render('index', {nomen: req.session.username});
+    res.render('index', {data: req.session});
 });
 
 app.get('/Aboutme', function(req, res) {
-    res.render('Aboutme', {nomen: req.session.username});
+    res.render('Aboutme', {data: req.session});
 });
 
 app.post('/welcome', (req, res) => {
-    console.log(req.body.visitorname);
-    req.session.username = req.body.visitorname;
-    res.redirect('/');
+    console.log(req.body)
+    req.session.username = req.body.nombre;
+    res.send('SUCCESS')
 });
