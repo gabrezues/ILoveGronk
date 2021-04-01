@@ -53,8 +53,25 @@ app.get('/Aboutme', function(req, res) {
     res.render('Aboutme', {data: req.session});
 });
 
+app.get('/blog', (req, res) => {
+    res.render('blog',{data: req.session});
+});
+
+app.get('/writing', (req, res) => {
+    res.render('writing',{data: req.session});
+});
+
+app.get('/blog/entry/', (req, res) => {
+    res.render('entry',{data: req.session, entry: {}});
+});
+
 app.post('/welcome', (req, res) => {
     console.log(req.body)
     req.session.username = req.body.nombre;
     res.send('SUCCESS')
 });
+
+app.post('/writeblogpost', (req, res) => {
+    console.log(req.body)
+    res.redirect('/')
+})
